@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import { Home } from './components/Home';
 import { Marketplace } from './components/Marketplace';
 import { ProductDetail } from './components/ProductDetail';
@@ -72,6 +73,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-white">
+      <SpeedInsights />
       {currentPage === 'home' && (
         <Home 
           onNavigate={navigateTo} 
